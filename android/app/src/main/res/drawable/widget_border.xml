@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF" /> <!-- Background color of the widget -->
+    <corners android:radius="16dp" /> <!-- Adjust the radius as needed for rounded corners -->
+    <stroke
+        android:width="2dp"
+        android:color="#CCCCCC" />
+</shape>
