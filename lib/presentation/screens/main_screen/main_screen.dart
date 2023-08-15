@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_8/bloc/main_screen_bloc/main_screen_bloc.dart';
 import 'package:task_8/domain/entities/user_entity.dart';
+import 'package:task_8/presentation/widgets/error_state.dart';
 
 import '../../../helper/constants/dimensions_resource.dart';
 import '../../../helper/constants/strings_resource.dart';
+import '../../widgets/loading_state.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -30,12 +32,8 @@ class _MainScreenState extends State<MainScreen> {
       body: BlocBuilder<MainScreenBloc, MainScreenState>(
         builder: (BuildContext context, state) {
           return state.when(
-              loading: () => const Center(
-                    child: CircularProgressIndicator(),
-                  ),
-              error: (errorMessage) => Center(
-                    child: Text(errorMessage),
-                  ),
+              loading: () => const LoadingState(),
+              error: (errorMessage) => ErrorState(errorMessage: errorMessage),
               loaded: (users, selectedUserIndex) {
                 return DataLoadedWidget(
                   selectedUserIndex: selectedUserIndex,
