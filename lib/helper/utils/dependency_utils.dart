@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:task_8/data/data_provider/user_model_remote_data_provider/user_model_remote_data_provider.dart';
+import 'package:task_8/data/repositories_impl/home_widget_repository_impl.dart';
 import 'package:task_8/data/repositories_impl/local_user_repository_impl.dart';
 import 'package:task_8/helper/constants/constants_resource.dart';
 import 'package:task_8/main.dart';
@@ -27,12 +28,19 @@ class DependencyUtils {
     getIt.registerSingleton(UserModelRemoteDataProvider(getIt()));
 
     // registering repositories
+    /// local user repo
     getIt.registerLazySingleton<LocalUserRepositoryImpl>(() =>
         LocalUserRepositoryImpl(
             dataProvider: getIt<UserModelLocalDataProvider>()));
+
+    /// remote user repo
     getIt.registerLazySingleton<RemoteUserRepositoryImpl>(() =>
         RemoteUserRepositoryImpl(
             dataProvider: getIt<UserModelRemoteDataProvider>(),
             sharedPreferences: getIt()));
+
+    /// home widget repo
+    getIt.registerLazySingleton<HomeWidgetRepositoryImpl>(
+        () => HomeWidgetRepositoryImpl(sharedPreferences: getIt()));
   }
 }

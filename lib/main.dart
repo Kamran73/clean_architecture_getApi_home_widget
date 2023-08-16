@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:task_8/bloc/main_screen_bloc/main_screen_bloc.dart';
+import 'package:task_8/data/repositories_impl/home_widget_repository_impl.dart';
 import 'package:task_8/data/repositories_impl/local_user_repository_impl.dart';
 import 'package:task_8/data/repositories_impl/remote_user_repository_impl.dart';
 import 'package:task_8/helper/utils/init_utils.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         localRepository: getIt<LocalUserRepositoryImpl>(),
         remoteRepository: getIt<RemoteUserRepositoryImpl>(),
         sharedPreferences: getIt(),
+        homeWidgetRepository: getIt<HomeWidgetRepositoryImpl>(),
       )..add(const MainScreenEvent.getData()),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
