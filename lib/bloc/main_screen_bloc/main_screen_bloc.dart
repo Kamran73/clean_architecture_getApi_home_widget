@@ -33,6 +33,7 @@ class MainScreenBloc extends Bloc<MainScreenEvent, MainScreenState> {
           await getRemoteData(emit);
         }
       }, selectUser: (int index, List<UserEntity> users) async {
+        /// update data on home widget
         await homeWidgetRepository.updateUserOfHomeScreenWidget(
             users[index], index);
         emit(MainScreenState.loaded(users, index));
@@ -48,6 +49,8 @@ class MainScreenBloc extends Bloc<MainScreenEvent, MainScreenState> {
         int index =
             sharedPreferences.getInt(ConstantsResource.SELECTED_USER_INDEX) ??
                 0;
+
+        /// update data on home widget
         await homeWidgetRepository.updateUserOfHomeScreenWidget(
             success[index], index);
         emit(MainScreenState.loaded(success, index));
