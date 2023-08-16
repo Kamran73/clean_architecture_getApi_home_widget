@@ -9,18 +9,8 @@ import '../../../helper/constants/dimensions_resource.dart';
 import '../../../helper/constants/strings_resource.dart';
 import '../../widgets/loading_state.dart';
 
-class MainScreen extends StatefulWidget {
+class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
-
-  @override
-  State<MainScreen> createState() => _MainScreenState();
-}
-
-class _MainScreenState extends State<MainScreen> {
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {

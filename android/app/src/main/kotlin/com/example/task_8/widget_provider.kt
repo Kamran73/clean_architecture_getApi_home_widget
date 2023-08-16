@@ -23,15 +23,6 @@ class HomeScreenWidgetProvider : AppWidgetProvider() {
                 val userName = widgetData.getString("user_name", "No Data")
                 setTextViewText(R.id.tvUserName, userName ?: "No Data")
 
-//                val imageName = widgetData.getString("filename", null)
-//                val imageFile = imageName?.let { File(it) }
-//                val imageExists = imageFile?.exists()
-//                if (imageExists == true) {
-//                    val myBitmap: Bitmap = BitmapFactory.decodeFile(imageFile.absolutePath)
-//                    setImageViewBitmap(R.id.widget_image, myBitmap)
-//                } else {
-//                    println("image not found!, looked @: $imageName")
-//                }
 
             }
             val pendingIntent = HomeWidgetLaunchIntent.getActivity(

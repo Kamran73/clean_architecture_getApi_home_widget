@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ThemesResource {
-  ThemesResource._();
+class AppTheme {
+  AppTheme._();
 
   static ThemeData themeData = ThemeData(
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),

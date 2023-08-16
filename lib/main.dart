@@ -7,7 +7,7 @@ import 'package:task_8/data/repositories_impl/remote_user_repository_impl.dart';
 import 'package:task_8/helper/utils/init_utils.dart';
 import 'package:task_8/presentation/screens/main_screen/main_screen.dart';
 
-import 'helper/constants/themes_resource.dart';
+import 'helper/theme/app_theme.dart';
 
 GetIt getIt = GetIt.instance;
 
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Task 8',
-        theme: ThemesResource.themeData,
+        theme: AppTheme.themeData,
         home: const MainScreen(),
       ),
     );

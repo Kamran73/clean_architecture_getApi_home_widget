@@ -17,13 +17,9 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$UserEntity {
   int get id => throw _privateConstructorUsedError;
-
   String get email => throw _privateConstructorUsedError;
-
   String get firstName => throw _privateConstructorUsedError;
-
   String get lastName => throw _privateConstructorUsedError;
-
   String get profileImage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -36,7 +32,6 @@ abstract class $UserEntityCopyWith<$Res> {
   factory $UserEntityCopyWith(
           UserEntity value, $Res Function(UserEntity) then) =
       _$UserEntityCopyWithImpl<$Res, UserEntity>;
-
   @useResult
   $Res call(
       {int id,
@@ -53,7 +48,6 @@ class _$UserEntityCopyWithImpl<$Res, $Val extends UserEntity>
 
   // ignore: unused_field
   final $Val _value;
-
   // ignore: unused_field
   final $Res Function($Val) _then;
 
@@ -97,7 +91,6 @@ abstract class _$$_UserEntityCopyWith<$Res>
   factory _$$_UserEntityCopyWith(
           _$_UserEntity value, $Res Function(_$_UserEntity) then) =
       __$$_UserEntityCopyWithImpl<$Res>;
-
   @override
   @useResult
   $Res call(
@@ -210,24 +203,18 @@ abstract class _UserEntity extends UserEntity {
       required final String firstName,
       required final String lastName,
       required final String profileImage}) = _$_UserEntity;
-
   const _UserEntity._() : super._();
 
   @override
   int get id;
-
   @override
   String get email;
-
   @override
   String get firstName;
-
   @override
   String get lastName;
-
   @override
   String get profileImage;
-
   @override
   @JsonKey(ignore: true)
   _$$_UserEntityCopyWith<_$_UserEntity> get copyWith =>

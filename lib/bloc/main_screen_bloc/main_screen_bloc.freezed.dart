@@ -22,7 +22,6 @@ mixin _$MainScreenEvent {
     required TResult Function(int index, List<UserEntity> users) selectUser,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? getData,
@@ -36,14 +35,12 @@ mixin _$MainScreenEvent {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_GetData value) getData,
     required TResult Function(_SelectUser value) selectUser,
   }) =>
       throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetData value)? getData,
@@ -71,7 +68,7 @@ class _$MainScreenEventCopyWithImpl<$Res, $Val extends MainScreenEvent>
     implements $MainScreenEventCopyWith<$Res> {
   _$MainScreenEventCopyWithImpl(this._value, this._then);
 
-// ignore: unused_field
+  // ignore: unused_field
   final $Val _value;
 // ignore: unused_field
   final $Res Function($Val) _then;
@@ -226,7 +223,7 @@ class _$_SelectUser implements _SelectUser {
   @override
   List<UserEntity> get users {
     if (_users is EqualUnmodifiableListView) return _users;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_users);
   }
 
@@ -686,7 +683,7 @@ class _$_Loaded implements _Loaded {
   @override
   List<UserEntity> get users {
     if (_users is EqualUnmodifiableListView) return _users;
-// ignore: implicit_dynamic_type
+    // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_users);
   }
 
