@@ -1,6 +1,3 @@
-# task_8
-
-Local DB, WebServices, BLOC & Widget
 
 ## Getting Started
 
